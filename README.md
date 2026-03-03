@@ -3,7 +3,7 @@ AI assignments, implementation of AI agents that play different games using diff
 
 Dino
 * Rule-based agent
-* Simple implementation of Google Chrome T-Rex. The goal is to control tyrannosaurus so he won't collide with obstacles — cactuses and birds — for as long as possible, while it slowly accelerates.
+* Simple implementation of Google Chrome T-Rex. The goal is to control tyrannosaurus so he won't collide with obstacles, cactuses and birds for as long as possible, while it slowly accelerates.
 
 Pac-Man	
 * General-purpose implementation of uniform-cost search, its able to search any problem implementing Problem interface, that can be found in search_templates.py. Search returns Solution instance if solution is found, otherwise None.
@@ -19,4 +19,5 @@ Cell Wars
 * Implements an agent for the Cell Wars game using search-based decision making. The agent models the game as a graph of cells with mass and ownership and makes strategic transfer decisions to expand territory and defeat the opponent. The solution leverages Minimax with alpha–beta pruning to evaluate game states and choose optimal actions. For Minimax, a heuristic evaluation function estimates the desirability of positions when the search depth limit is reached
 
 Minesweeper	
-* backtracking search for CSPs
+* backtracking search for CSPs (Constraint Satisfaction Problem), each constraint specifies that exactly k variables from a subset must be True. The solver includes: forward checking (constraint propagation), which infers variable values using propagation similar to AC-3. Backtracking search with inference uses degree heuristic for variable selection and maintains arc consistency during search. Proof-by-contradiction inference (infer_var) determines forced variable values by testing satisfiability. The implementation efficiently detects contradictions, propagates constraints, and finds solutions while respecting time limits.
+* Using the CSP solver, I implemented an intelligent Minesweeper agent. The agent: models each tile as a Boolean variable (mine / no mine), adds constraints based on revealed numbers, uses forward checking to infer safe tiles and mines, applies contradiction-based inference when propagation alone is insufficient, and requests hints only when logically necessary.
