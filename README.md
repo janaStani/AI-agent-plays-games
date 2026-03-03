@@ -15,7 +15,8 @@ Sokoban
 * Sokoban is a puzzle game where the player pushes boxes onto designated goal squares. The complexity arises from irreversible moves and dead positions that can make a level unsolvable. The agent works as follows: models Sokoban as a HeuristicProblem, uses A* search to find an optimal sequence of moves, applies a custom admissible and consistent heuristic, and prunes invalid states using dead square detection
 
 Cell Wars	
-* search algorithm implemented using the minmax with alpha-beta pruning
+* Search algorithm implemented using the minmax with alpha-beta pruning
+* Implements an agent for the Cell Wars game using search-based decision making. The agent models the game as a graph of cells with mass and ownership and makes strategic transfer decisions to expand territory and defeat the opponent. The solution leverages Minimax with alpha–beta pruning to evaluate game states and choose optimal actions. For Minimax, a heuristic evaluation function estimates the desirability of positions when the search depth limit is reached
 
 Minesweeper	
 * backtracking search for CSPs
